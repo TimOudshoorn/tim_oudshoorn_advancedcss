@@ -1,0 +1,69 @@
+$bcolor:#c3cfe2;
+$padding-standard: 20px;
+@mixin text {
+    color:rgba(92, 92, 92, 100);
+    font-size: 12pt;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 2rem;
+    font-weight: bold
+}
+@mixin displayflex {
+    display: flex; 
+    justify-content: center; 
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+body {
+    background: $bcolor;
+}
+.op1 {
+    width: 400px;
+    height: 500px;
+    background: white;
+    border-radius: 25px;
+     ;
+    p {
+        @include text;
+        padding: $padding-standard  
+    }
+    h1{
+        @include text();
+        font-size: 20pt;
+        color: white;      
+    }
+    a {
+        @include text();
+    }
+    a :hover {
+        @include text();
+        color: white;
+        font-weight: normal;
+        transform: translate(0px, -5px);
+    } 
+    .bottom{
+        background: #686de0;
+        border-radius: 25px;
+        @include displayflex();
+        padding: 0px;
+        width: 100%;
+        height: 50%;
+        border-top-left-radius:0px ;
+        border-top-right-radius:0px ;
+        text-align: center;
+    }
+    img{
+        width: 150px;
+        border-radius: 150px;
+        border: white solid 10px;
+        @include displayflex(flex-wrap);
+        flex-wrap: wrap;
+        }
+}
+.op2 {
+    background: blue;
+     img  {
+         width: 10px;
+     }
+ }
